@@ -5,7 +5,6 @@ class Person {
     private int passportId;
 
     Person() {
-
     }
 
     Person(String firstName, String lastName, int passportId) {
@@ -14,11 +13,11 @@ class Person {
         this.passportId = passportId;
     }
 
-    public Person(int passportId) {
+    Person(int passportId) {
         this.passportId = passportId;
     }
 
-    public Person(String firstName, String lastName) {
+    Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -50,20 +49,15 @@ class Person {
 
 class Task1 {
     public static void main(String[] args) {
-        Person women = new Person();
-        Person man = new Person();
+        Person firstWomen = new Person();
+        Person firstMan = new Person("Dan", "Porfirev");
+        Person secondMan = new Person(613132);
+        Person secondWomen = new Person("Jasmine", "Bachitova", 813213);
 
-        women.setFirstName("Jasmine");
-        women.setLastName("Bachitova");
-        women.setPassportId(631324);
-
-        man.setFirstName("Dan");
-        man.setLastName("Porfirev");
-        man.setPassportId(785743);
-
-        System.out.println(man.getFirstName() + " " + man.getLastName() + " Passport ID:" + man.getPassportId());
-        System.out.println(women.getFirstName() + " " + women.getLastName() + "Passport ID:" + women.getPassportId());
-
+        System.out.println("First women: unknown");
+        System.out.println("First man: " + firstMan.getFirstName() + " " + firstMan.getLastName() + "Passport ID: unknown");
+        System.out.println("Second man: no name Passport ID: " + secondMan.getPassportId());
+        System.out.println("Second women:: " + secondWomen.getFirstName() + " " + secondWomen.getLastName() + "Passport ID:" + secondWomen.getPassportId());
     }
 
 }
