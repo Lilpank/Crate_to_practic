@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6;
+package ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6to1_7;
 
 import ru.ssau.tk.Lilpank.Crate_practic.task1_3.*;
 
@@ -27,5 +27,11 @@ public class Points {
     }
     public static double length(Point obj){
         return obj.length();
+    }
+    public static Point opposite(Point obj){
+        return new Point(-obj.getX(),-obj.getY(),-obj.getZ());
+    }
+    public static Point inverse(Point obj){
+        return new Point(1/obj.getX(),1/obj.getY(),1/obj.getZ());
     }
 }
