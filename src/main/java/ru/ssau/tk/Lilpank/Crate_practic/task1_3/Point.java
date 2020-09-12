@@ -2,7 +2,6 @@ package ru.ssau.tk.Lilpank.Crate_practic.task1_3;
 
 public final class Point {
     private double x = 0, y = 0, z = 0;
-    private double radius = 0;
 
     public Point(double x, double y, double z) {
         this.x = x;
@@ -30,8 +29,9 @@ public final class Point {
                 ", z=" + z +
                 '}';
     }
-    public double length(){
-        return radius = Math.sqrt(x*x+y*y+z*z);
+
+    public double length() {
+        return  Math.sqrt(x * x + y * y + z * z);
     }
 
 
