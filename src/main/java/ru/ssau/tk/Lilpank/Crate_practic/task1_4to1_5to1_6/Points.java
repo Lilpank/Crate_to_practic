@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5;
+package ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6;
 
 import ru.ssau.tk.Lilpank.Crate_practic.task1_3.*;
 
@@ -24,5 +24,8 @@ public class Points {
     }
     public static Point enlarge(Point obj,double alfa){
         return new Point(obj.getX()*alfa,obj.getY()*alfa,obj.getZ()*alfa);
+    }
+    public static double length(Point obj){
+        return obj.length();
     }
 }
