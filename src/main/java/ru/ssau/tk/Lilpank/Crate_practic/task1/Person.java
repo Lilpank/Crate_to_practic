@@ -1,30 +1,30 @@
 package ru.ssau.tk.Lilpank.Crate_practic.task1;
 
-class Person {
+public class Person {
     private String firstName, lastName;
     private int passportId;
 
-    void setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    void setLastName(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    void setPassportId(int passportId) {
+    public void setPassportId(int passportId) {
         this.passportId = passportId;
     }
 
-    String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    int getPassportId() {
+    public int getPassportId() {
         return passportId;
     }
 }
