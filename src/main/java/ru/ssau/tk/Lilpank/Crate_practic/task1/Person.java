@@ -4,6 +4,17 @@ public class Person {
     private String firstName, lastName;
     private int passportId;
 
+    public Person() {
+
+    }
+    public Person(int passportId){
+        this.passportId=passportId;
+    }
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -38,8 +49,8 @@ class Task1 {
         women.setLastName("Bachitova");
         women.setPassportId(631324);
 
-        man.setFirstName("Dan");
-        man.setLastName("Porfirev");
+        man.setFirstName("Denis");
+        man.setLastName("Dorfirev");
         man.setPassportId(785743);
 
         System.out.println(man.getFirstName() + " " + man.getLastName() + " Passport ID:" + man.getPassportId());
