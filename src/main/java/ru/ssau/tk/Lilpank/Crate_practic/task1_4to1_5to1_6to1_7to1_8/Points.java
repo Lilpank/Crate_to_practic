@@ -4,6 +4,8 @@ import ru.ssau.tk.Lilpank.Crate_practic.task1_3.*;
 
 
 public class Points {
+    public static double acuracy = 0.00005;
+
     private Points() {
 
     }
@@ -47,4 +49,12 @@ public class Points {
     public static Point vectorProduct(Point a, Point b) {
         return new Point(a.getY() * b.getZ() - a.getZ() * b.getY(), a.getZ() * b.getX() - a.getX() * b.getZ(), a.getX() * b.getY() - a.getY() * b.getX());
     }
+
+    private static boolean equalsApproximately(double a, double b) {
+        return Math.abs(a - b) < acuracy;
+    }
+    public static boolean equalsApproximately(Point a, Point b){
+        return equalsApproximately(a.getX(),b.getX())&&equalsApproximately(a.getY(),b.getY())&&equalsApproximately(a.getZ(),b.getZ());
+    }
+
 }
