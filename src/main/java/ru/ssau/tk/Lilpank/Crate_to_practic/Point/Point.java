@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_3;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Point;
 
 public final class Point {
     private double x = 0, y = 0, z = 0;

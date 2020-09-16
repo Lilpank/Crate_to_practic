@@ -1,11 +1,11 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_10;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Person;
 
-import org.testng.annotations.Test;
-import ru.ssau.tk.Lilpank.Crate_practic.task1.Person;
+import org.testng.annotations.*;
+import ru.ssau.tk.Lilpank.Crate_to_practic.task1.Person;
 
 import static org.testng.Assert.*;
 
-public class PersonTest {
+public class FirstPersonTest {
     @Test
     public void test() {
         Person firstPerson = new Person();

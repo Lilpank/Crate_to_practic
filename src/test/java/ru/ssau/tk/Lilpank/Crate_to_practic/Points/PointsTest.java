@@ -1,11 +1,10 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_12;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Points;
 
 import org.testng.annotations.Test;
-import ru.ssau.tk.Lilpank.Crate_practic.task1_3.Point;
-import ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6to1_7to1_8.Points;
+import ru.ssau.tk.Lilpank.Crate_to_practic.Point.Point;
 
 import static org.testng.Assert.*;
-import static ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6to1_7to1_8.Points.equalsApproximately;
+import static ru.ssau.tk.Lilpank.Crate_to_practic.Points.Points.equalsApproximately;
 
 public class PointsTest {
     @Test
@@ -46,14 +45,15 @@ public class PointsTest {
     public void testLength() {
         assertEquals(Points.length(new Point(1.0, 1.0, 1.0)), Math.sqrt(3), 0.00005);
     }
+
     @Test
     public void testOpposite() {
-        assertTrue(Points.equalsApproximately(Points.opposite(new Point(1.0, 1.5, -0.5)),new Point(-1.0, -1.5, 0.5)));
+        assertTrue(Points.equalsApproximately(Points.opposite(new Point(1.0, 1.5, -0.5)), new Point(-1.0, -1.5, 0.5)));
     }
 
     @Test
     public void testInverse() {
-        assertFalse(Points.equalsApproximately(Points.inverse(new Point(1.0, 1.5, 0.5)),new Point(6.0, 0.66666, 2.0)));
+        assertFalse(Points.equalsApproximately(Points.inverse(new Point(1.0, 1.5, 0.5)), new Point(6.0, 0.66666, 2.0)));
     }
 
     @Test

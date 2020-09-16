@@ -1,6 +1,6 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_4to1_5to1_6to1_7to1_8;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Points;
 
-import ru.ssau.tk.Lilpank.Crate_practic.task1_3.*;
+import ru.ssau.tk.Lilpank.Crate_to_practic.Point.*;
 
 
 public class Points {

@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_practic.task1_2;
+package ru.ssau.tk.Lilpank.Crate_to_practic.task1.task1_2;
 
 public class Person {
     private String firstName, lastName;
@@ -49,7 +49,6 @@ public class Person {
 
 class Task1 {
     public static void main(String[] args) {
-        Person firstWomen = new Person();
         Person firstMan = new Person("Dan", "Porfirev");
         Person secondMan = new Person(613132);
         Person secondWomen = new Person("Jasmine", "Bachitova", 813213);
@@ -58,6 +57,7 @@ class Task1 {
         System.out.println("First man: " + firstMan.getFirstName() + " " + firstMan.getLastName() + "Passport ID: unknown");
         System.out.println("Second man: no name Passport ID: " + secondMan.getPassportId());
         System.out.println("Second women:: " + secondWomen.getFirstName() + " " + secondWomen.getLastName() + "Passport ID:" + secondWomen.getPassportId());
+
     }
 
 }
