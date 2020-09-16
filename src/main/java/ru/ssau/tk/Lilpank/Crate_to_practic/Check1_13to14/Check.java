@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_to_practic.task1_13;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Check1_13to14;
 
 import ru.ssau.tk.Lilpank.Crate_to_practic.Person.task1_2.Person;
 
