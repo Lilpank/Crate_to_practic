@@ -1,7 +1,6 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Person;
 
 import org.testng.annotations.*;
-import ru.ssau.tk.Lilpank.Crate_to_practic.task1.Person;
 
 import static org.testng.Assert.*;
 

@@ -1,8 +1,8 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Person;
 
 import org.testng.annotations.Test;
-import ru.ssau.tk.Lilpank.Crate_to_practic.task1.task1_2.Person;
-import ru.ssau.tk.Lilpank.Crate_to_practic.task1_2.*;
+import ru.ssau.tk.Lilpank.Crate_to_practic.Person.task1_2.Person;
+
 
 import static org.testng.Assert.*;
 
@@ -44,8 +44,8 @@ public class PersonTest {
         Person firstperson = new Person();
         Person secondPerson = new Person(null, null);
 
-        assertEquals(firstperson.getFirstName(), null);
-        assertEquals(firstperson.getLastName(), null);
+        assertNull(firstperson.getFirstName(), null);
+        assertNull(firstperson.getLastName(), null);
         assertNull(secondPerson.getFirstName());
         assertNull(secondPerson.getLastName());
     }

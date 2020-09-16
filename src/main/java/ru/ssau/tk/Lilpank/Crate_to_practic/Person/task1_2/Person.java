@@ -1,11 +1,16 @@
-package ru.ssau.tk.Lilpank.Crate_to_practic.task1;
+package ru.ssau.tk.Lilpank.Crate_to_practic.Person.task1_2;
 
 public class Person {
     private String firstName, lastName;
     private int passportId;
 
     public Person() {
+    }
 
+    public Person(String firstName, String lastName, int passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
     }
 
     public Person(int passportId) {
@@ -15,12 +20,6 @@ public class Person {
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    public Person(String firstName, String lastName, int passportId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.passportId = passportId;
     }
 
     public void setFirstName(String firstName) {
@@ -50,20 +49,6 @@ public class Person {
 
 class Task1 {
     public static void main(String[] args) {
-        Person women = new Person();
-        Person man = new Person();
-
-        women.setFirstName("Jasmine");
-        women.setLastName("Bachitova");
-        women.setPassportId(631324);
-
-        man.setFirstName("Denis");
-        man.setLastName("Dorfirev");
-        man.setPassportId(785743);
-
-        System.out.println(man.getFirstName() + " " + man.getLastName() + " Passport ID:" + man.getPassportId());
-        System.out.println(women.getFirstName() + " " + women.getLastName() + "Passport ID:" + women.getPassportId());
-        Person firstWomen = new Person();
         Person firstMan = new Person("Dan", "Porfirev");
         Person secondMan = new Person(613132);
         Person secondWomen = new Person("Jasmine", "Bachitova", 813213);
@@ -72,6 +57,7 @@ class Task1 {
         System.out.println("First man: " + firstMan.getFirstName() + " " + firstMan.getLastName() + "Passport ID: unknown");
         System.out.println("Second man: no name Passport ID: " + secondMan.getPassportId());
         System.out.println("Second women:: " + secondWomen.getFirstName() + " " + secondWomen.getLastName() + "Passport ID:" + secondWomen.getPassportId());
+
     }
 
 }
