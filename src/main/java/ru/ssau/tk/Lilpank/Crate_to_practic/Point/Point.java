@@ -1,6 +1,6 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Point;
 
-public final class Point {
+public class Point {
     private double x = 0, y = 0, z = 0;
 
     public Point(double x, double y, double z) {
@@ -31,7 +31,7 @@ public final class Point {
     }
 
     public double length() {
-        return  Math.sqrt(x * x + y * y + z * z);
+        return Math.sqrt(x * x + y * y + z * z);
     }
 
 
