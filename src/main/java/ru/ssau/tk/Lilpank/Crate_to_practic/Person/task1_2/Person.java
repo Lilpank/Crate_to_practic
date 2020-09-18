@@ -1,8 +1,20 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Person.task1_2;
 
+import ru.ssau.tk.Lilpank.Crate_to_practic.task1_17.Gender;
+
 public class Person {
     private String firstName, lastName;
     private int passportId;
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    private Gender gender;
 
     public Person() {
     }
@@ -11,6 +23,14 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
         this.passportId = passportId;
+    }
+
+
+    public Person(String firstName, String lastName, Gender gender, int passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
+        this.gender = gender;
     }
 
     public Person(int passportId) {

@@ -2,6 +2,7 @@ package ru.ssau.tk.Lilpank.Crate_to_practic.Person;
 
 import org.testng.annotations.Test;
 import ru.ssau.tk.Lilpank.Crate_to_practic.Person.task1_2.Person;
+import ru.ssau.tk.Lilpank.Crate_to_practic.task1_17.Gender;
 
 
 import static org.testng.Assert.*;
@@ -50,21 +51,28 @@ public class PersonTest {
         assertNull(secondPerson.getLastName());
     }
 
-        @Test
-        public void testPassportIdConstructor () {
-            Person person = new Person(358);
-            assertEquals(person.getPassportId(), 358);
-        }
-
-        @Test
-        public void testFullConstructor () {
-            Person person = new Person("Denis", "Porfirev", 358);
-            Person secondPerson = new Person(null, null, 21);
-
-            assertEquals(person.getFirstName(), "Denis");
-            assertEquals(person.getLastName(), "Porfirev");
-            assertEquals(person.getPassportId(), 358);
-            assertNull(secondPerson.getFirstName());
-            assertNull(secondPerson.getLastName());
-        }
+    @Test
+    public void testPassportIdConstructor() {
+        Person person = new Person(91913);
+        assertEquals(person.getPassportId(), 82828);
     }
+
+    @Test
+    public void testFullConstructor() {
+        Person person = new Person("Denis", "Porfirev", 7327);
+        Person secondPerson = new Person(null, null, 7421);
+
+        assertEquals(person.getFirstName(), "Denis");
+        assertEquals(person.getLastName(), "Porfirev");
+        assertEquals(person.getPassportId(), 358);
+        assertNull(secondPerson.getFirstName());
+        assertNull(secondPerson.getLastName());
+    }
+
+    @Test
+    public void testConstructor() {
+        Person person = new Person("Denis", "Porfirev", Gender.Male, 2847);
+
+        assertEquals(person.getGender(), Gender.Male);
+    }
+}
