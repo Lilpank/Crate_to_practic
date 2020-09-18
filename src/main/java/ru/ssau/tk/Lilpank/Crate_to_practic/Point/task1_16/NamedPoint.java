@@ -1,8 +1,9 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Point.task1_16;
 
 import ru.ssau.tk.Lilpank.Crate_to_practic.Point.Point;
+import ru.ssau.tk.Lilpank.Crate_to_practic.task1_18.Resettable;
 
-public class NamedPoint extends Point {
+public class NamedPoint extends Point implements Resettable {
     public String name;
 
     public NamedPoint() {
@@ -26,5 +27,10 @@ public class NamedPoint extends Point {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void reset() {
+        name = "Absent";
     }
 }

@@ -29,4 +29,12 @@ public class NamedPointTest {
         assertNotEquals(namedPoint.getName(), "А");/*Русское A*/
     }
 
+    @Test
+    public void testreset() {
+        NamedPoint namedPoint = new NamedPoint(1, 1, 1, "B");
+        assertEquals(namedPoint.getName(), "B");
+        namedPoint.reset();
+        assertEquals(namedPoint.getName(), "Absent");
+    }
+
 }
