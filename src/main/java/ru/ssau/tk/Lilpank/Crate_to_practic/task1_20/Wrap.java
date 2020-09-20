@@ -1,12 +1,12 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.task1_20;
 
 public class Wrap {
-    @Deprecated
+
     static Integer boxing(int i) {
         return new Integer(i);
     }
 
-    @Deprecated
+
     static Boolean boxing(boolean b) {
         return new Boolean(b);
     }
