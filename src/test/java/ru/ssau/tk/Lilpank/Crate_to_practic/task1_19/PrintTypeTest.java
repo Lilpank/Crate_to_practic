@@ -21,7 +21,7 @@ public class PrintTypeTest {
         PrintType.printType(true);
         PrintType.printType(new Person());
         PrintType.printType(new Point(0, 0, 0));
-
+        PrintType.printType(null);
     }
 
 }
