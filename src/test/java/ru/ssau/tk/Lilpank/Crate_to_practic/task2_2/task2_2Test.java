@@ -8,7 +8,7 @@ public class task2_2Test {
 
     @Test
     public void testSetNumber() {
-        int[] array = new task2_2().setNumber(10);
+        int[] array = new Task2_2().setNumber(10);
         assertEquals(array.length,10);
         assertEquals(array[0],2);
         assertEquals(array[9],2);

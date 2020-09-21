@@ -7,7 +7,7 @@ import static org.testng.Assert.*;
 public class task2_1Test {
     @Test
     public void testSetnumber() {
-        int[] array = task2_1.setnumber(5);
+        int[] array = Task2_1.setnumber(5);
         assertEquals(array.length, 5);
     }
 }

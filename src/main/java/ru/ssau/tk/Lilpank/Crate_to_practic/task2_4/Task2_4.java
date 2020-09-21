@@ -1,6 +1,6 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.task2_4;
 
-public class task2_4 {
+public class Task2_4 {
     public static int[] setNumber(int size) {
         int[] arr = new int[size];
         int count = size * 2;
