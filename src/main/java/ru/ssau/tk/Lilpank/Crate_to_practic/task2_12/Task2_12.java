@@ -1,6 +1,6 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.task2_12;
 
-public class Task2_11 {
+public class Task2_12 {
     static double[] getDividersOfNumbers(int number) {
         int count = 0;
         for (int i = 1; i < Math.sqrt(number); i++) {
