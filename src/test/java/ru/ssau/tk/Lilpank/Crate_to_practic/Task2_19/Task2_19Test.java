@@ -8,5 +8,8 @@ public class Task2_19Test {
 
     @Test
     public void testGetArrayEven() {
+        int[] array = new int[]{1,2,3,4,5,6,7,8,9,20};
+                            //  0 1 2 3 4 5 6 7 8 9
+        assertEquals(Task2_19.getArrayEven(array),25);//1+3+5+7+9
     }
 }
