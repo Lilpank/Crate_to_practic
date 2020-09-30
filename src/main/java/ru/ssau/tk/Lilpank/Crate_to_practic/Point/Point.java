@@ -23,11 +23,11 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x=" + x +
-                ", y=" + y +
-                ", z=" + z +
-                '}';
+        return "[" +
+                x +", "
+                +y +", "
+                +z +
+                ']';
     }
 
     public double length() {
