@@ -75,4 +75,5 @@ public class PersonTest {
 
         assertEquals(person.getGender(), Gender.Male);
     }
+
 }

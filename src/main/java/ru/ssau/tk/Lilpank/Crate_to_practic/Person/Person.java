@@ -46,6 +46,11 @@ public class Person {
     public int getPassportId() {
         return passportId;
     }
+
+    @Override
+    public String toString() {
+        return firstName + (firstName.isEmpty() || lastName.isEmpty() ? "" : " ") + lastName;
+    }
 }
 
 class Task1 {
