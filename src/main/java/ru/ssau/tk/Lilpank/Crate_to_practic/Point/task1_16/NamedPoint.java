@@ -3,6 +3,8 @@ package ru.ssau.tk.Lilpank.Crate_to_practic.Point.task1_16;
 import ru.ssau.tk.Lilpank.Crate_to_practic.Point.Point;
 import ru.ssau.tk.Lilpank.Crate_to_practic.task1_18.Resettable;
 
+import java.util.Objects;
+
 public class NamedPoint extends Point implements Resettable {
     public String name;
 
@@ -18,7 +20,12 @@ public class NamedPoint extends Point implements Resettable {
     public NamedPoint(double x, double y, double z, String name) {
         super(x, y, z);
         this.name = name;
+    }
 
+    @Override
+    public String toString() {
+        if (Objects.equals(null, name)) return super.toString();
+        return name + ": " + super.toString();
     }
 
     public String getName() {
