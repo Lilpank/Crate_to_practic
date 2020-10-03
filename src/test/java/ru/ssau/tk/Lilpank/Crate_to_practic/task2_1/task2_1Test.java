@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.Crate_to_practic.tasks2_1;
+package ru.ssau.tk.Lilpank.Crate_to_practic.task2_1;
 
 import org.testng.annotations.Test;
 
