@@ -1,7 +1,7 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Task2_31;
 
 public class Matrix {
-    private final double[][] array;
+    private double[][] array;
     private final int n;
     private final int m;
 
