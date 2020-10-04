@@ -1,5 +1,7 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Task2_31;
 
+import java.util.StringJoiner;
+
 public class Matrix {
     private double[][] array;
     private final int n;
@@ -25,5 +27,19 @@ public class Matrix {
 
     public void setAt(int n, int m, double number) {
         array[n][m] = number;
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner columnMatrix = new StringJoiner(";\n");
+        StringJoiner lineMatrix = new StringJoiner(",");
+        for (double[] lineArray : array) {
+            for (double element : lineArray) {
+                lineMatrix.add(element + "");
+            }
+            columnMatrix.add(lineMatrix.toString());
+            lineMatrix = new StringJoiner(",");
+        }
+        return columnMatrix.toString() + ";";
     }
 }
