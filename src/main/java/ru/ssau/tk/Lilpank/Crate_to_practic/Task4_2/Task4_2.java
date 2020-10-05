@@ -1,7 +1,7 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Task4_2;
 
 public class Task4_2 {
-    public static String[] set(String[] str, int n) {
+    public static String[] getSymbolOnIndex(String[] str, int n) {
         String[] newStr = new String[str.length];
         for (String s : str) {
             if (n > s.length()) {
