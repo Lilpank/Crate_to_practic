@@ -14,8 +14,6 @@ public class Task4_1Test {
         assertEquals(Task4_1.getObjectPerson(p1), "Dan Porfirev");
         Person p2 = new Person(null, null);
         // assertNull(Task4_1.getObjectPerson(p2)); выводит: java.lang.NullPointerException
-        Assert.assertThrows(NullPointerException.class, () -> {
-           assertNull(p2);
-        });
+        Assert.assertThrows(NullPointerException.class, () -> assertNull(p2));
     }
 }
