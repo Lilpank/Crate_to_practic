@@ -7,8 +7,10 @@ import static org.testng.Assert.*;
 public class Task4_5Test {
 
     @Test
-    public void testTestClone() {
-        Object temp = new Object();
-        Object copy =  temp.clone();
+    public void testTestClone() throws CloneNotSupportedException {
+      Daughter temp = new Daughter();
+      Daughter copy = (Daughter) temp.clone();
+      Task4_5 temp1 = new Task4_5();
+      Task4_5 copy1 = (Task4_5) temp1.clone();
     }
 }
