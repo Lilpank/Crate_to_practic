@@ -10,15 +10,14 @@ public class Task4_2Test {
     @Test
     public void testSet() {
         String[] str = {"Understandably", "have", "a", "nice", "day"};
-        assertEquals(Task4_2.set(str, 0), new String[]{"U", "h", "a", "n", "d"});
+        assertEquals(Task4_2.getSymbolOnIndex(str, 0), new String[]{"U", "h", "a", "n", "d"});
         Assert.assertThrows(StringIndexOutOfBoundsException.class,
-                () -> assertEquals(Task4_2.set(str, 1),
-                        new String[]{"n", "a", "", "i", "a"}));
+                () -> Task4_2.getSymbolOnIndex(str, 1));
 
         Assert.assertThrows(NullPointerException.class,
-                () -> assertNull(Task4_2.set(null, 0)));
+                () -> Task4_2.getSymbolOnIndex(null, 0));
         String[] str1 = {null, "null"};
         Assert.assertThrows(NullPointerException.class,
-                () -> assertNull(Task4_2.set(str1, 0)));
+                () -> Task4_2.getSymbolOnIndex(str1, 0));
     }
 }
