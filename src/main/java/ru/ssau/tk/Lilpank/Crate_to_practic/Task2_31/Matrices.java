@@ -1,5 +1,7 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Task2_31;
 
+import ru.ssau.tk.Lilpank.Crate_to_practic.Task4_7.IncompatibleDimensionsException;
+
 public class Matrices {
 
     static Matrix getMatrixMultiplyOnNumber(Matrix matrix, int number) {
@@ -12,26 +14,29 @@ public class Matrices {
         return resultMatrix;
     }
 
-    static Matrix getMatrixPlus(Matrix matrix1, Matrix matrix2) {
+    static Matrix getMatrixPlus(Matrix matrix1, Matrix matrix2) throws IncompatibleDimensionsException {
         Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
         if (chekDifferentMatrixSize(matrix1, matrix2)) {
-            return null;
-        } else for (int i = 0; i < matrix1.getN(); i++) {
-            for (int j = 0; j < matrix1.getM(); j++)
-                resultMatrix.setAt(i, j, matrix1.getAt(i, j) + matrix2.getAt(i, j));
+            throw new IncompatibleDimensionsException();
+        } else {
+            for (int i = 0; i < matrix1.getN(); i++) {
+                for (int j = 0; j < matrix1.getM(); j++)
+                    resultMatrix.setAt(i, j, matrix1.getAt(i, j) + matrix2.getAt(i, j));
+            }
         }
         return resultMatrix;
     }
 
 
     static boolean chekDifferentMatrixSize(Matrix matrix1, Matrix matrix2) {
-        return !(matrix1.getM() == matrix2.getM() || matrix1.getN() == matrix2.getM());
+        return !(matrix1.getM() == matrix2.getM() && matrix1.getN() == matrix2.getN());
     }
 
-    static Matrix getMatrixMultiply(Matrix matrix1, Matrix matrix2) {
+    static Matrix getMatrixMultiply(Matrix matrix1, Matrix matrix2) throws IncompatibleDimensionsException {
         Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
         if (chekDifferentMatrixSize(matrix1, matrix2)) {
-            return null;
+            throw new IncompatibleDimensionsException("Матрицы не совместимы!: \n1)" + matrix1.getN() + ", " + matrix1.getM()
+                    + "\n2)" + matrix2.getN() + ", " + matrix2.getM());
         } else {
             for (int i = 0; i < matrix1.getN(); i++) {
                 for (int j = 0; j < matrix1.getN(); j++) {
