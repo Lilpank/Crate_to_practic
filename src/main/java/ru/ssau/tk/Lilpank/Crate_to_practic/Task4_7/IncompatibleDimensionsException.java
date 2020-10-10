@@ -1,7 +1,6 @@
 package ru.ssau.tk.Lilpank.Crate_to_practic.Task4_7;
-import ru.ssau.tk.Lilpank.Crate_to_practic.Task2_31.Matrices;
 
-public class IncompatibleDimensionsException extends Throwable   {
+public class IncompatibleDimensionsException extends RuntimeException   {
     public IncompatibleDimensionsException() {
         this("Матрицы несовместимы!");
     }

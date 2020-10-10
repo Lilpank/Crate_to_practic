@@ -14,7 +14,7 @@ public class Matrices {
         return resultMatrix;
     }
 
-    static Matrix getMatrixPlus(Matrix matrix1, Matrix matrix2) throws IncompatibleDimensionsException {
+    static Matrix getMatrixPlus(Matrix matrix1, Matrix matrix2)  {
         Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
         if (chekDifferentMatrixSize(matrix1, matrix2)) {
             throw new IncompatibleDimensionsException();
@@ -32,7 +32,7 @@ public class Matrices {
         return !(matrix1.getM() == matrix2.getM() && matrix1.getN() == matrix2.getN());
     }
 
-    static Matrix getMatrixMultiply(Matrix matrix1, Matrix matrix2) throws IncompatibleDimensionsException {
+    static Matrix getMatrixMultiply(Matrix matrix1, Matrix matrix2){
         Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
         if (chekDifferentMatrixSize(matrix1, matrix2)) {
             throw new IncompatibleDimensionsException("Матрицы не совместимы!: \n1)" + matrix1.getN() + ", " + matrix1.getM()

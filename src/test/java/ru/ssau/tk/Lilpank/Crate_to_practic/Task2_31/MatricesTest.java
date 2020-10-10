@@ -21,7 +21,7 @@ public class MatricesTest {
     }
 
     @Test
-    public void testGetMatrixPlus() throws IncompatibleDimensionsException {
+    public void testGetMatrixPlus()  {
         Matrix matrix1 = new Matrix(2, 2);
         matrix1.setAt(0, 0, 1);
         matrix1.setAt(0, 1, 1);
@@ -56,7 +56,7 @@ public class MatricesTest {
     }
 
     @Test
-    public void testGetMatrixMultiply() throws IncompatibleDimensionsException {
+    public void testGetMatrixMultiply() {
         Matrix matrix1 = new Matrix(2, 2);
         matrix1.setAt(0, 0, 4);
         matrix1.setAt(0, 1, 1);
