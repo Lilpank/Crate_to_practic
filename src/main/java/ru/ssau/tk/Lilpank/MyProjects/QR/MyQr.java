@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.MyProjects;
+package ru.ssau.tk.Lilpank.MyProjects.QR;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package ru.ssau.tk.Lilpank.WeatherZhigulevsk;
+package ru.ssau.tk.Lilpank.MyProjects.WeatherZhigulevsk;
 
 import org.jsoup.Jsoup;
 
