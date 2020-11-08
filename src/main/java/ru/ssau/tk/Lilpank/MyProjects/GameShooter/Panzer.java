@@ -3,32 +3,26 @@ package ru.ssau.tk.Lilpank.MyProjects.GameShooter;
 import javax.swing.*;
 import java.awt.*;
 
-public class Main extends JPanel {
+public class Panzer extends JPanel {
+    private static int x = 256;
+    private int y = 256;
 
-    // 1 - up, 2 - down, 3 - left, 4 - right
-    int direction = 1;
-
-    int x = 256;
-    int y = 256;
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Games");// создаем окно с названием
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// закрытие окна при клике крестика
-        frame.setSize(1800, 1000); // размер окна
-        frame.getContentPane().add(new Main());
-        frame.setLocation(60, 0);
-        frame.setVisible(true); // окно видимо
+    Panzer(){
     }
 
+    //рисуется танк в этом методе.
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.RED);
+
         g.fillRect(x, y, 64, 64);
 
+        g.setColor(Color.GREEN);
+        // 1 - up, 2 - down, 3 - left, 4 - right
+        int direction = 1;
         int width = 20;
         int height = 24;
-        g.setColor(Color.GREEN);
         switch (direction) {
             case (1): {
                 g.fillRect(x + 22, y, width, height);
@@ -48,4 +42,5 @@ public class Main extends JPanel {
             }
         }
     }
+
 }
