@@ -2,6 +2,7 @@ package ru.ssau.tk.Lilpank.MyProjects.GameShooter;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
     public static int WIDTH = 640;
@@ -9,11 +10,16 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     private boolean running = false;
     private Handler handler;
+    private Random r;
 
     public Game() {
         new Window(WIDTH, HEIGHT, "Battle game", this);
         handler = new Handler();
-        handler.addObject(new Player(100, 100, ID.Player));
+        this.addKeyListener(new KeyInput(handler));
+        r = new Random();
+        handler.addObject(new Player(WIDTH / 2, HEIGHT / 2, ID.Player));
+        handler.addObject(new Player(WIDTH / 2 +128, HEIGHT / 2, ID.Player2));
+
     }
 
     public synchronized void start() {
