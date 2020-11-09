@@ -13,6 +13,7 @@ public abstract class GameObject {
         this.y = y;
         this.id = id;
     }
+    public abstract void shoot();
 
     public abstract void tick();
 

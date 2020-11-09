@@ -10,14 +10,19 @@ public class BasicEnemy extends GameObject {
     }
 
     @Override
+    public void shoot() {
+
+    }
+
+    @Override
     public void tick() {
         x += velX;
         y += velY;
-        //Game.HEIGHT - 34 это костыль.
-        if (y <= 0 || y >= Game.HEIGHT - 34) {
+        // это костыль.
+        if (y <= 0 || y >= Game.HEIGHT - 55) {
             velY *= -1;
         }
-        if (x <= 0 || x >= Game.WIDTH - 34) {
+        if (x <= 0 || x >= Game.WIDTH - 40) {
             velX *= -1;
         }
     }

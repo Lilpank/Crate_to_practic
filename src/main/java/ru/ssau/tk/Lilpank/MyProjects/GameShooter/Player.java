@@ -8,6 +8,11 @@ public class Player extends GameObject {
     }
 
     @Override
+    public void shoot() {
+        new Bullet();
+    }
+
+    @Override
     public void tick() {
         x += velX;
         y += velY;
