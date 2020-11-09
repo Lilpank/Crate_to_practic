@@ -18,8 +18,7 @@ public class Game extends Canvas implements Runnable {
         this.addKeyListener(new KeyInput(handler));
         r = new Random();
         handler.addObject(new Player(WIDTH / 2, HEIGHT / 2, ID.Player));
-        handler.addObject(new Player(WIDTH / 2 +128, HEIGHT / 2, ID.Player2));
-
+        handler.addObject(new BasicEnemy(WIDTH / 2, HEIGHT / 2, ID.BasicEnemy));
     }
 
     public synchronized void start() {
@@ -82,6 +81,15 @@ public class Game extends Canvas implements Runnable {
         handler.render(g);
         g.dispose();
         bs.show();
+    }
+
+    public static int clamp(int var, int min, int max) {
+        if (var >= max) {
+            return var = max;
+        } else if (var <= min) {
+            var = min;
+        }
+        return var;
     }
 
     public static void main(String[] args) {
