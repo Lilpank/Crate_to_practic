@@ -28,8 +28,8 @@ public class KeyInput extends KeyAdapter {
                 if (key == KeyEvent.VK_RIGHT) {
                     tempObject.setVelX(5);
                 }
-                if(key==KeyEvent.VK_ESCAPE){
-                    tempObject.shoot();
+                if(key==KeyEvent.VK_SPACE){
+                    //
                 }
             }
         }

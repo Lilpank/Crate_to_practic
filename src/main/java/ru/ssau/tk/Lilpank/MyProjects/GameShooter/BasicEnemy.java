@@ -9,10 +9,6 @@ public class BasicEnemy extends GameObject {
         velY = 5;
     }
 
-    @Override
-    public void shoot() {
-
-    }
 
     @Override
     public void tick() {
@@ -31,5 +27,10 @@ public class BasicEnemy extends GameObject {
     public void render(Graphics g) {
         g.setColor(Color.red);
         g.fillRect(x, y, 16, 16);
+    }
+
+    @Override
+    public Rectangle getBounds() {
+        return new Rectangle(x,y,16,16);
     }
 }

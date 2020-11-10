@@ -13,11 +13,12 @@ public abstract class GameObject {
         this.y = y;
         this.id = id;
     }
-    public abstract void shoot();
 
     public abstract void tick();
 
     public abstract void render(Graphics g);
+
+    public abstract Rectangle getBounds();
 
     public void setX(int x) {
         this.x = x;
