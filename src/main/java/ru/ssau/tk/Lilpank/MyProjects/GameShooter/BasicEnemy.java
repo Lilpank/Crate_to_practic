@@ -3,6 +3,7 @@ package ru.ssau.tk.Lilpank.MyProjects.GameShooter;
 import java.awt.*;
 
 public class BasicEnemy extends GameObject {
+
     public BasicEnemy(int x, int y, ID id) {
         super(x, y, id);
         velX = 5;
@@ -31,6 +32,6 @@ public class BasicEnemy extends GameObject {
 
     @Override
     public Rectangle getBounds() {
-        return new Rectangle(x,y,16,16);
+        return new Rectangle(x, y, 16, 16);
     }
 }
