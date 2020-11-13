@@ -43,4 +43,7 @@ public class Player extends GameObject {
     public Rectangle getBounds() {
         return new Rectangle(x, y, 32, 32);
     }
+    public BasicEnemy shoot(){
+        return new BasicEnemy(x,y,ID.BasicEnemy);
+    }
 }

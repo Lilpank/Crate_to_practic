@@ -2,7 +2,9 @@ package ru.ssau.tk.Lilpank.MyProjects.GameShooter;
 
 import java.awt.*;
 
+
 public class BasicEnemy extends GameObject {
+    private int count = 0;
 
     public BasicEnemy(int x, int y, ID id) {
         super(x, y, id);
@@ -16,11 +18,17 @@ public class BasicEnemy extends GameObject {
         x += velX;
         y += velY;
         // это костыль.
+        if (count == 2) {
+            //удалить пульку
+
+        }
         if (y <= 0 || y >= Game.HEIGHT - 55) {
             velY *= -1;
+            count++;
         }
         if (x <= 0 || x >= Game.WIDTH - 40) {
             velX *= -1;
+            count++;
         }
     }
 
