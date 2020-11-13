@@ -4,12 +4,14 @@ import java.awt.*;
 
 
 public class BasicEnemy extends GameObject {
-    private int count = 0;
+    int count = 0;
+    private Handler handler;
 
-    public BasicEnemy(int x, int y, ID id) {
+    public BasicEnemy(int x, int y, ID id, Handler handler) {
         super(x, y, id);
         velX = 5;
         velY = 5;
+        this.handler = handler;
     }
 
 
@@ -17,10 +19,9 @@ public class BasicEnemy extends GameObject {
     public void tick() {
         x += velX;
         y += velY;
-        // это костыль.
-        if (count == 2) {
-            //удалить пульку
-
+        //пускай пулька делает 3 отскока.
+        if (count == 3) {
+            handler.clearEnemy();
         }
         if (y <= 0 || y >= Game.HEIGHT - 55) {
             velY *= -1;
@@ -36,6 +37,7 @@ public class BasicEnemy extends GameObject {
     public void render(Graphics g) {
         g.setColor(Color.red);
         g.fillRect(x, y, 16, 16);
+
     }
 
     @Override

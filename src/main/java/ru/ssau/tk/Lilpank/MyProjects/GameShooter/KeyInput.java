@@ -40,6 +40,7 @@ public class KeyInput extends KeyAdapter {
                 if (key == KeyEvent.VK_SPACE) {
                     //TODO: Выстрел
                     // handler.addObject(new BasicEnemy(tempObject.getX(), tempObject.getY(), ID.BasicEnemy)); прикольно
+                    handler.clearEnemy();
                 }
             }
         }

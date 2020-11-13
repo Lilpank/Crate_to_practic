@@ -44,6 +44,6 @@ public class Player extends GameObject {
         return new Rectangle(x, y, 32, 32);
     }
     public BasicEnemy shoot(){
-        return new BasicEnemy(x,y,ID.BasicEnemy);
+        return new BasicEnemy(x,y,ID.BasicEnemy,handler);
     }
 }
