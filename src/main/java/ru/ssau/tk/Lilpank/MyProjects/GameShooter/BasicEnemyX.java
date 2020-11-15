@@ -2,27 +2,22 @@ package ru.ssau.tk.Lilpank.MyProjects.GameShooter;
 
 import java.awt.*;
 
-
-public class BasicEnemy extends GameObject {
+public class BasicEnemyX extends GameObject {
     int count = 0;
-    private Handler handler;
 
-    public BasicEnemy(int x, int y, ID id, Handler handler) {
-        super(x, y, id);
-        velX = 5;
-        velY = 5;
-        this.handler = handler;
+    public BasicEnemyX(int x, int y, ID id) {
+        super(x + 30, y + 10, id);
+            velX += 5;
     }
 
+    public BasicEnemyX(int x, int y) {
+        super(x - 20, y + 10, ID.BasicEnemy);
+            velX -= 5;
+    }
 
     @Override
     public void tick() {
         x += velX;
-        y += velY;
-        //пускай пулька делает 3 отскока.
-        if (count == 3) {
-            handler.clearEnemy();
-        }
         if (y <= 0 || y >= Game.HEIGHT - 55) {
             velY *= -1;
             count++;

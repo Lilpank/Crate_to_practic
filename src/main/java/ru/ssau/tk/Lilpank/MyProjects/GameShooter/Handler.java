@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class Handler {
     LinkedList<GameObject> object = new LinkedList<>();
+    LinkedList<Gan> ganObject = new LinkedList<>();
 
     public void tick() {
         for (int i = 0; i < object.size(); i++) {
@@ -24,15 +25,15 @@ public class Handler {
         this.object.add(object);
     }
 
-    public void removeObject(GameObject object) {
-        this.object.remove(object);
+    public void removeObject(Gan object) {
+        this.ganObject.remove(object);
     }
 
-    public void clearEnemy() {
-        for (int i = 0; i < object.size(); i++) {
-            GameObject tempObject = object.get(i);
-            if(tempObject.getId() != ID.Player){
-                removeObject(tempObject);
+    public void clearGan() {
+        for (int i = 0; i < ganObject.size(); i++) {
+            Gan tempGanObject = ganObject.get(i);
+            if (tempGanObject.getId() != ID.Player) {
+                removeObject(tempGanObject);
             }
         }
     }

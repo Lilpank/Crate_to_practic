@@ -6,7 +6,7 @@ public class Player extends GameObject {
     Handler handler;
 
     public Player(int x, int y, ID id, Handler handler) {
-        super(x, y, id);
+        super(x,y,id);
         this.handler = handler;
     }
 
@@ -35,15 +35,10 @@ public class Player extends GameObject {
     public void render(Graphics g) {
         g.setColor(Color.white);
         g.fillRect(x, y, 32, 32);
-        g.setColor(Color.green);
-        g.fillRect(x + 12, y, 8, 12);
     }
 
     @Override
     public Rectangle getBounds() {
         return new Rectangle(x, y, 32, 32);
-    }
-    public BasicEnemy shoot(){
-        return new BasicEnemy(x,y,ID.BasicEnemy,handler);
     }
 }
